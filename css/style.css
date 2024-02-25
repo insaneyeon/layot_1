@@ -1,0 +1,327 @@
+@font-face {
+	font-family: 'SB Sans Display';
+	src: url('/fonts/SB Sans Display.otf') format('opentype');
+}
+
+html {
+	font-family: 'SB Sans Display', sans-serif;
+}
+body {
+	margin: 0;
+}
+ul {
+    display: flex;
+    padding: 0;
+	margin: 0;
+    list-style: none;
+}
+h1, h2, h3, h4, p, li, small {
+	margin: 0;
+	line-height: 22px;
+	color: rgb(51, 63, 72);
+	font-weight: 400;
+}
+h1 {
+	font-weight: 300;
+	font-size: 48px;
+}
+h4 {
+	font-size: 17px;
+}
+button {
+	padding: 9px 16px;
+	border-radius: 29px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 22px;
+	background-color: transparent;
+	border: 2px solid transparent;
+}
+button:hover {
+	cursor: pointer;
+}
+
+.grey_small{
+	color: rgb(151, 151, 151);
+	font-size: 15px;
+}
+.grey_middle{
+	color: rgb(151, 151, 151);
+	font-size: 17px;
+}
+
+/*** Стили для шапки сайта ***/
+
+header {
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+    border-bottom: rgba(151, 151, 151, 0.3) 1px solid;
+	padding: 26px 68px;
+}
+header li, header p {
+	color: #979797;
+	font-size: 15px;
+	margin: 0;
+}
+header li:hover, header p:hover, header svg:hover {
+    cursor: pointer;
+}
+header #logo svg {
+	font-size: 20px;
+}
+header nav li {
+    margin: 0 20px;
+}
+header #menu {
+	display: flex;
+	align-items: center;
+}
+header #menu svg {
+	margin-left: 10px;
+}
+header #menu #hide_menu {
+	display: none;
+	position: absolute;
+	z-index: 1;
+	padding: 20px 20px 10px 20px;
+	top: 50px;
+	right: 68px;
+	background: rgb(255, 255, 255);
+	border-radius: 4px;
+	box-shadow: 0px 10px 23px 0px rgba(0, 0, 0, 0.07);
+}
+header #menu #hide_menu li {
+	color: rgb(151, 151, 151);
+	font-size: 15px;
+	margin-bottom: 10px;
+}
+header #menu:hover #hide_menu {
+	display: block;
+}
+
+/*** Стили для главного контента сайта ***/
+
+main {
+	padding: 64px 68px 112px 68px;
+}
+
+/** Стили для вкладок **/
+
+main .tab {
+    margin: 40px 0 49px 0;
+	border-bottom: rgba(151, 151, 151, 0.3) 1px solid;
+}
+main .tab li {
+    margin-right: 40px;
+	color: rgb(151, 151, 151);
+	font-size: 15px;
+	border-bottom: transparent 2px solid;
+	padding-bottom: 17px;
+}
+main .tab li:hover, main .tab li.active {
+	color: rgb(51, 63, 72);
+	border-bottom: rgb(33, 160, 56) 2px solid;
+	cursor: pointer;
+}
+
+/** Стили для заказов **/
+
+main .content {
+    display: flex;
+    justify-content: space-between;
+}
+main .content .orders {
+    width: 65%;
+}
+main .content .orders .order {
+    border: rgba(151, 151, 151, 0.3) 2px solid;
+    border-radius: 15px;
+	margin-bottom: 41px;
+}
+main .content .orders .order .title {
+    display: flex;
+    justify-content: space-between;
+	padding: 32px;
+	background-color: rgb(250, 249, 249);
+	border-top-left-radius: 15px;
+	border-top-right-radius: 15px;
+}
+main .content .orders .order .title h2 {
+    margin: 12px 0 4px 0;
+}
+main .content .order .title p {
+	font-size: 15px;
+}
+main .content .order .title .done {
+    background-color: rgb(9, 165, 82);
+	color: rgb(255, 255, 255);
+	padding: 0 8px;
+	border-radius: 4px;
+	width: fit-content;
+}
+main .content .order .title .close {
+    background: rgb(151, 151, 151);
+	color: rgb(255, 255, 255);
+	padding: 0 8px;
+	border-radius: 4px;
+	width: fit-content;
+}
+main .content .order .title #delivery {
+    width: 50%;
+}
+main .content .order .title #delivery p {
+    font-size: 17px;
+}
+main .content .order .products {
+    display: flex;
+	justify-content: space-between;
+	margin: 32px;
+}
+main .content .order  .products p {
+	font-size: 17px;
+}
+main .content .order .products .product {
+    display: flex;
+	width: 50%;
+}
+main .content .order .products .product img {
+    height: 80px;
+	width: auto;
+	margin-right: 24px;
+	border: 2px dashed rgb(151, 151, 151, 0.3);
+}
+main .content .order hr {
+	background: rgb(151, 151, 151);
+	opacity: 0.3;
+	margin: 0 32px;
+}
+main .content .order .amply {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+	padding: 20px 32px 20px 76px;
+	font-size: 17px;
+}
+main .content .order .details {
+	display: flex;
+	justify-content: space-between;
+	padding: 24px 32px;
+}
+main .content .order .details p {
+	font-size: 17px;
+	margin-top: 8px;
+}
+main .content .order .details span {
+	color: rgb(0, 110, 255);
+}
+main .content .order .details .recipient,
+main .content .order .details .pay {
+	width: 50%;
+}
+main .content .order .details .recipient .no_margin {
+	margin: 0;
+}
+main .content .order .details .pay .result {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 24px;
+}
+main .content .order .details .pay .result .list,
+main .content .order .details .pay .result .sum {
+	width: 50%;
+}
+main .content .orders button {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+	border: 2px solid rgb(151, 151, 151);
+	color: rgb(151, 151, 151);
+}
+
+/** Стили для блока поддержки **/
+
+main .content .support {
+    width: 25%;
+}
+main .content .support h4 {
+	font-weight: 600;
+}
+main .content .support p {
+	font-size: 17px;
+    margin: 8px 0 32px 0;
+}
+main .content .support button {
+    border: 2px solid rgb(0, 110, 255);
+	color: rgb(0, 110, 255);
+}
+
+/*** Стили для подвала сайта ***/
+
+footer {
+    background: rgb(243, 244, 245);
+	padding: 30px 69px 30px 30px;
+}
+footer h4, footer li, footer p {
+	opacity: 0.5;
+	margin: 0;
+}
+footer h4 {
+	font-weight: 600;
+	font-size: 17px;
+}
+footer li, footer p {
+	font-size: 14px;
+}
+footer p {
+	margin: 4px 0 24px 0;
+}
+footer .info {
+    display: flex;
+    justify-content: space-between;
+}
+footer .info .menu_links {
+    display: flex;
+    justify-content: space-between;
+    width: 25%;
+}
+footer .info .menu_links ul {
+    display: block;
+}
+footer .info .menu_links ul li {
+    margin-bottom: 15px;
+}
+footer .info .menu_links ul li:hover {
+    cursor: pointer;
+}
+footer .info .contacts {
+    width: 35%;
+}
+footer .other_links {
+	margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+	align-items: center;
+}
+footer .other_links ul {
+    width: 60%;
+	align-items: center;
+}
+footer .other_links ul li {
+    margin-right: 16px;
+}
+footer .other_links ul li:hover {
+    cursor: pointer;
+}
+footer .other_links .icons {
+	align-items: center;
+	width: 35%;
+}
+footer .other_links .icons img {
+    height: 14.5px;
+	width: auto;
+	margin-right: 16px;
+}
+footer .other_links .icons img:hover {
+    cursor: pointer;
+}
